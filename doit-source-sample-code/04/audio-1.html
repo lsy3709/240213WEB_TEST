@@ -13,13 +13,18 @@
   <link rel="stylesheet" href="css/poster.css">
 </head>
 <body>
+  <img src="/doit-source-sample-code/04/images/salad.jpg" alt="샐러드">
   <div id="container">
     <!-- 상대 경로로 해당 이미지 파일에 접근을 시도 했음. 
     현재 파일: audio-1.html, 같은 위치에 images 폴더에 바로 접근했음. -->
+    
     <img src="images/tangerines.jpg" alt="레드향">
     <!-- 음원 파일을 불러오는 역할이고, 해당 위치를 불러오는 방식은 
     상대 경로로 불러오고 있음.  -->
     <!-- 절대 경로 : C:\Users\it\Documents\WEB\doit-source-sample-code\04\medias\spring.mp3 -->
+    <!-- 현재, 라이브 서버가 동작을 하고 있어서, 
+    루트 디렉토리가, WEB:  /
+    그 아래에 : /doit-source-sample-code -->
     <!-- controls 속성은 : 상태 조절하는 바, 막대, 플레이, 중지, 리모컨으로 보면 됨. -->
     <audio src="medias/spring.mp3" controls></audio>
     <h1>레드향</h1>
