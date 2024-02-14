@@ -3,11 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <title>상품 소개 페이지</title>
+  <!-- css 작업시 , css 파일 분리해서 작업을 많이 함. 
+  이유
+  1. 유지보수 편함 -->
+  
+  <!-- css 파일과 연결 시키는 코드 -->
+  <!-- 현재 해당 프로젝트에 저장이 되어 있는 파일을 사용하지만, 
+  cdn을 이용해서, 인터넷을 통해서 다운로드 받습니다.  -->
   <link rel="stylesheet" href="css/poster.css">
 </head>
 <body>
   <div id="container">
+    <!-- 상대 경로로 해당 이미지 파일에 접근을 시도 했음. 
+    현재 파일: audio-1.html, 같은 위치에 images 폴더에 바로 접근했음. -->
     <img src="images/tangerines.jpg" alt="레드향">
+    <!-- 음원 파일을 불러오는 역할이고, 해당 위치를 불러오는 방식은 
+    상대 경로로 불러오고 있음.  -->
+    <!-- 절대 경로 : C:\Users\it\Documents\WEB\doit-source-sample-code\04\medias\spring.mp3 -->
+    <!-- controls 속성은 : 상태 조절하는 바, 막대, 플레이, 중지, 리모컨으로 보면 됨. -->
     <audio src="medias/spring.mp3" controls></audio>
     <h1>레드향</h1>
     <p>껍질에 붉은 빛이 돌아 <b>레드향</b>이라 불린다.</p>
@@ -26,19 +39,27 @@
     <img src="images/salad.jpg" width="320">
     <hr>
     <h2>상품 구성</h2>
+    <!-- 웹 문서에 표를 작성할 때 사용하는 태그 : table -->
     <table>
+      <!-- caption 속석은 제목으로 보셔도 됨.  -->
       <caption>선물용과 가정용 상품 구성</caption>
       <colgroup>
+        <!-- 행, 열을 묶을 때 사용하는 그룹 : colgroup -->
         <col style="background-color:#eee;">
         <col>
+        <!-- 1열, 2열 특정 2개의 열을 합칠 때 사용하는 속성. -->
         <col span="2" style="width:150px">
         <!-- span 속성을 사용해 합치기 전
           <col style="width:150px">
           <col style="width:150px">
         -->
       </colgroup>
+      <!-- 표의 제목을 의미하는 , 2줄로 표시 되고, 가운데 정렬이 기본으로 되어 있는 속성.  -->
       <thead>
+        <!-- tr : 하나의 행을 의미를 하고,  -->
         <tr>
+          <!-- td : 각 열을 의미, 
+          th : 각 열의 제목을 의미, 2줄이고, 자동으로 가운데 정렬이 됨.  -->
           <th>용도</th>
           <th>중량</th>
           <th>갯수</t>
@@ -46,7 +67,9 @@
         </tr>
       </thead>
       <tbody>
+        <!-- 표의 각 컬럼을 제외하고, 실제 본문의 내용이라 보면 됨.  -->
         <tr>
+          <!-- 1행, 2행을 하나로 합칠 때, 셀 합치기 -->
           <td rowspan="2">선물용</td>
           <td>3kg</td>
           <td>11~16과</td>
