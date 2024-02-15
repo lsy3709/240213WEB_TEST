@@ -8,12 +8,19 @@
 <body>
   <h1>레드향 주문하기</h1>
   <div id="container">
+    <!-- form 자주 쓰는 태그이고, 백엔드 서버에 사용자의 입력값을 전달하는 
+    입력 폼들의 묶음 -->
     <form>
       <fieldset>
         <legend>상품 선택</legend>
         <p><b>주문할 상품을 선택해 주세요.</b></p>
         <ul id="product">
           <li>
+            <!-- value 의 속성이고, 속성의 값 : s_3, 
+            폼에서 사용자가 입력, 체크한 값들을 , 서버로 전달. 
+            서버로 전달하는 값을 : value의 속성값을 전달. 
+            즉, s_3 이 서버에 전달이 됩니다.  
+          주의사항, 선물용 3kg 보여지는 값이고, 전달용이 아닙니다. -->
             <label><input type="checkbox" value="s_3">선물용 3kg</label>
             <input type="number" min="0" max="5">개 <small>(최대 5개)</small>
           </li>
