@@ -7,6 +7,12 @@
   <body>
 	<form>
     <fieldset>
+      <!-- 사용 용도는, 사용자에게 보여주기 싫은 정보를 말함. 
+      예) 게시판, 해당 게시글의 상세페이지를 조회를 할려면, 해당 게시글의 아이디를 서버에게 
+      알려주어야 함. 그 때, 사용자는 게시판 아이디를 알 필요가 없음. 
+      서버만 필요한 정보를 전달시, 숨겨서 전달함.  -->
+      <!-- 최소 jsp 이후로, 예제를 보게 될 예정 -->
+
       <input type="hidden" name="url" id="url" value="사이트를 통한 직접 로그인">
     	<label>아이디: <input type="text" id="user_id" size="10"></label>
       <label>비밀번호: <input type="password" id="user_pw" size="10"></label>

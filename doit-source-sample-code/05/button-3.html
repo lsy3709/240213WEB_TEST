@@ -21,12 +21,16 @@
             서버로 전달하는 값을 : value의 속성값을 전달. 
             즉, s_3 이 서버에 전달이 됩니다.  
           주의사항, 선물용 3kg 보여지는 값이고, 전달용이 아닙니다. -->
+
+          <!-- 화면상에서 입력된 내용을 , 서버로 전달하는 2번째 방법. 
+          해당 input 태그의 name의 값을 이용해서 서버로 전달한다.
+          ex) 서버 입장에서, name = s_3_p 의 값을 가져오는 형식   -->
             <label><input type="checkbox" value="s_3">선물용 3kg</label>
-            <input type="number" min="0" max="5">개 <small>(최대 5개)</small>
+            <input type="number" name="s_3_p" min="0" max="5">개 <small>(최대 5개)</small>
           </li>
           <li>
             <label><input type="checkbox" value="s_5">선물용 5kg</label>
-            <input type="number" min="0" max="3" value="1">개 <small>(최대 3개)</small>
+            <input type="number" name="s_5_p" min="0" max="3" value="1">개 <small>(최대 3개)</small>
           </li>
           <li>
             <label><input type="checkbox" value="f_3">가정용 3kg</label>
@@ -50,8 +54,14 @@
         <legend>배송 정보</legend>
         <ul id="shipping">
           <li>
+            <!-- 라벨도 한두개 아닙니다, 그래서, 이게 특정 
+            인풋의 라벨이라는 것을 표기 해주기 위해서 
+            for 라는 속성을 사용하고, 해당 인풋 태그의 id를 적기. -->
             <label for="user-name">이름 </label>
             <input type="text" id="user-name">
+          </li>
+          <li>
+            배송주소 : <input type="text" id="addr">
           </li>
           <li>
             <label for="addr">배송 주소</label>
@@ -67,7 +77,7 @@
           </li>
           <li>
             <label for="d-day">배송 지정</label>
-            <input type="date" id="d-day"> <small>(주문일로부터 최소 3일 이후)</small>
+            <input type="date" name="order_date" id="d-day"> <small>(주문일로부터 최소 3일 이후)</small>
           </li>     
           <li>
             <label for="memo">메모</label>
