@@ -1,0 +1,13 @@
+/* css 파일 안에서는 <style> 태그 사용하면 안됨. */
+
+/* 2.html 해당 문서에, css 적용 여부 확인 테스트용 속성
+h1 , a{
+    color: red;
+} */
+
+h1 {
+    font-size: 45px;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    margin: 0;
+}
