@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            border: 5px solid gray;
+        }
+        #grid {
+            border: 5px solid pink;
+            /* 요소를 배치할 때 특정의 비율로 배치 하기위한 방법 */
+            display: grid;
+            /* 해당 컬럼의 배치시, 크기의 비율을 설정하는 속성.  */
+            grid-template-columns: 3fr 1fr 2fr;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="grid">
+        <div>NAVIGATION</div>
+        <div>ARTICLE</div>
+        <div>SAMPLE</div>
+    </div>
+</body>
+
+</html>
