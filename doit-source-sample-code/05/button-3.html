@@ -39,8 +39,11 @@
         </ul>      
         <p><b>포장 선택</b></p>
         <ul>
-          <li><label><input type="radio" value="yes">선물 포장</label></li>
-          <li><label><input type="radio" value="no">선물 포장 안 함</label></li>
+          <!-- 주의 사항, 라디오 타입에서, name 속성으로 같은 이름으로 그룹 지어주기. -->
+          <li><label><input type="radio" name="test" value="yes">선물 포장</label></li>
+          <li><label><input type="radio" name="test" value="no">선물 포장 안 함</label></li>
+          <!-- <li><label><input type="radio" name="gift" value="yes" >선물 포장</label></li>
+          <li><label><input type="radio" name="gift" value="no">선물 포장 안 함</label></li> -->
         </ul>    
       </fieldset>
       <fieldset>
