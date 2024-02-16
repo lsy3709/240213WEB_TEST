@@ -13,8 +13,31 @@
     <!-- 계획
       1. 입력란에 입력된 내용을 가지고 오는 방법 모색. 
       예) document.getElementById('blogName')
+      해보니, 값이 아닌 해당 객체를 가지고 왔어요. 
+
+      객체: 수납도구. 
+      예) 가지고 오고 싶은 내용은 수납도구의 이름을 가지고 오고 싶어요. 
+
+      추가로 검색해보기. 
+      속성을 무엇을 사용해라. value . 약속. 
+      예2) document.getElementById('blogName').value
+
       2. 가지고 온 내용을 특정 변수에 담기. 
+         var 변수를 선언하는 키워드 , message , 변수의 이름. 
+        var message = document.getElementById('change_text_input').value
       3. 버튼을 클릭시 해당 변수를 사용하는 방법 모색.  -->
+
+      <!-- 함수를 이용하는 편. 
+      1 함수를 정의하고, 
+      2 함수를 사용을 했음.  -->
+
+      <!-- 연습해보기. 똑같은 방식으로. 
+      이메일과 패스워드 입력받는 화면을 만들고, 제출 버튼을 만들고. 
+      입력된 이메일과 패스워드를 화면에 똑같이 출력해보기.  -->
+      1단계, 이메일을 먼저 입력받고, 출력해보기. 
+      2단계, 따로 패스워드를 입력받고, 따로 출력해보기. 
+      3단계, 한번에 2개를 다 출력해보기. 
+
 
     <input type="text" id="change_text_input">
     <input type="button" value="변경글자 alert로 띄우기" id="change_text_btn"
@@ -50,6 +73,7 @@
 
         // input에서 입력된 값 가져와서, alert 출력해보기. 
         function printMessage(){
+            // var 변수를 선언하는 키워드 , message , 변수의 이름. 
         var message = document.getElementById('change_text_input').value
         alert(message)
         }
