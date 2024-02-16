@@ -1,0 +1,58 @@
+/* css 파일 안에서는 <style> 태그 사용하면 안됨. */
+
+/* 2.html 해당 문서에, css 적용 여부 확인 테스트용 속성
+h1 , a{
+    color: red;
+} */
+
+h1 {
+    font-size: 45px;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    margin: 0;
+    padding: 20px;
+}
+
+
+body {
+    margin: 0;
+}
+
+#grid {
+    display: grid;
+    /* fr -> fragment(x), fraction(부분) */
+    /* 첫번째 열 150px 고정이되고, 나머지 2번째 열은 1fr 반응형 처럼 동작 */
+    grid-template-columns: 150px 1fr;
+}
+
+/* 아이디가 grid인 요소의 하위의 ol 태그 전부에 적용하기 */
+#grid ol {
+    border-right: 1px solid gray;
+    width: 100px;
+    margin: 0;
+    padding: 20px;
+    margin-left: 10px;
+}
+
+#article {
+    padding-left: 25px;
+}
+
+@media(max-width :800px) {
+    #grid {
+        display: block;
+    }
+
+    #grid ol {
+        border-right: none;
+    }
+
+    h1 {
+        border-bottom: none;
+    }
+
+    h2 {
+        color: brown;
+    }
+
+}
