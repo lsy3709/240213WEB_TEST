@@ -8,8 +8,21 @@
 </head>
 
 <body>
+    <h1>특정 버튼 이벤트 확인2 onchange </h1>
 
-    <h1>특정 버튼 이벤트 확인</h1>
+    <!-- 계획
+      1. 입력란에 입력된 내용을 가지고 오는 방법 모색. 
+      예) document.getElementById('blogName')
+      2. 가지고 온 내용을 특정 변수에 담기. 
+      3. 버튼을 클릭시 해당 변수를 사용하는 방법 모색.  -->
+
+    <input type="text" id="change_text_input">
+    <input type="button" value="변경글자 alert로 띄우기" id="change_text_btn"
+      onclick="printMessage()">
+    <br>
+    <input type="text" onchange="alert('changed')">
+
+    <h1>특정 버튼 이벤트 확인 onclick </h1>
     <!-- onclick 속성을 이용해서, 안에 alert 를 함수를 사용했음. 
     alert 라는 함수는 간단히 무언가 경고를 하는 창을 띄워주는 역할. 
     내용은. 소괄호 안에 있는 내용. : 자바스크립트, 문자열을 표기 할 때, 
@@ -34,6 +47,13 @@
     <h1>자바스크립트 동적, HTML 정적</h1>
     <script>
         document.write(1 + 1);
+
+        // input에서 입력된 값 가져와서, alert 출력해보기. 
+        function printMessage(){
+        var message = document.getElementById('change_text_input').value
+        alert(message)
+        }
+
     </script>
     <h1>1+1</h1>
 </body>
