@@ -34,11 +34,26 @@
       <!-- 연습해보기. 똑같은 방식으로. 
       이메일과 패스워드 입력받는 화면을 만들고, 제출 버튼을 만들고. 
       입력된 이메일과 패스워드를 화면에 똑같이 출력해보기.  -->
-      1단계, 이메일을 먼저 입력받고, 출력해보기. 
+      <!-- 1단계, 이메일을 먼저 입력받고, 출력해보기. 
       2단계, 따로 패스워드를 입력받고, 따로 출력해보기. 
-      3단계, 한번에 2개를 다 출력해보기. 
+      3단계, 한번에 2개를 다 출력해보기.  -->
+
+      <!-- 연습해보기. 
+      간단한 회원가입 폼 
+      1. 이메일 
+      2. 패스워드 
+      3. 확인용 패스워드 
+      4. 이름 
+      5. 전화번호 
+      결과는 alert 경고창에 보여주기.  -->
 
 
+    email : <input type="text" id="email">
+    password : <input type="password" id="password">
+    <br>
+    <!-- 마지막은 만들었던 함수를 사용하는 코드임. onclick="printUserInfo()" -->
+    <input type="button" value="로그인" onclick="printUserInfo()">
+    <br>
     <input type="text" id="change_text_input">
     <input type="button" value="변경글자 alert로 띄우기" id="change_text_btn"
       onclick="printMessage()">
@@ -77,6 +92,17 @@
         var message = document.getElementById('change_text_input').value
         alert(message)
         }
+
+        // 함수를 정의를 잘했음. -> 항상, 적용을 해야함. !!
+        function printUserInfo(){
+            // var 변수를 선언하는 키워드 , message , 변수의 이름. 
+        var email = document.getElementById('email').value
+        var password = document.getElementById('password').value
+        // 문자열을 연결하는 연산자, "+" 
+        var userInfo = "이메일 : " + email + ", 패스워드 : "+ password
+        alert(userInfo)
+        }
+
 
     </script>
     <h1>1+1</h1>
