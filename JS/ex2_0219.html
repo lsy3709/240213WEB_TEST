@@ -9,6 +9,43 @@
 
 <body>
 
+  
+   
+   <script>
+   function two() {
+   document.write('<li>2-1</li>');
+   document.write('<li>2-2</li>');
+   }
+   document.write('<li>1</li>');
+   two();
+   document.write('<li>3</li>');
+   two();
+   document.write("<h1>"+"=================="+"</h1>")
+
+   // 함수의 사용(호출)
+   // sum (1,2) , 던지는 값(인자값) arguement
+   // 함수의 정의, 받는 변수(매개변수) parameter
+   function sum (num1, num2) {
+    result = 0;
+    result = num1 + num2 ;
+    return result
+    }
+    
+
+    num1 = 2;
+    num2 = 2;
+    // 동작 여부 ? 동작함. 
+    document.write("<h1>"+"======sum (num1, num2)============"+"</h1>")
+    sum (num1, num2);
+    // 동작 여부 ? 동작함. 
+    document.write("<h1>"+"======sum (1, 2);============"+"</h1>")
+    sum (1, 2);
+    // 동작 여부 ? 동작 안함. 
+    document.write("<h1>"+"====== sum ();============"+"</h1>")
+    sum ();
+   </script>
+
+
   <!-- 연습, 짝수 : 2,4,6,8 출력해보기. 
   조건
   1) while 문 사용 
