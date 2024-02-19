@@ -1,20 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
+  <!-- document.querySelector('#night_day') => 사실 본인이 이미 
+  <input id="night_day" 요소인데, 똑같은 코드 또 사용하기 보다는 
+  this 로 대체를 했음.  -->
+
+  <input id="night_day" type="button" value="night" onclick="
+  if(this.value === 'night') {
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color= 'white';
+    this.value = 'day';   
+  } else {
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color= 'black';
+    this.value = 'night';   
+  }
+  ">
+
+<input id="night_day2" type="button" value="night" onclick="
+if(document.querySelector('#night_day2').value === 'night') {
+  document.querySelector('body').style.backgroundColor = 'black';
+  document.querySelector('body').style.color= 'white';
+  document.querySelector('#night_day2').value = 'day';   
+} else {
+  document.querySelector('body').style.backgroundColor = 'white';
+  document.querySelector('body').style.color= 'black';
+  document.querySelector('#night_day2').value = 'night';   
+}
+">
+
+
+  <h2>IF-true</h2>
+  <script>
+    document.write("1<br>");
+    if (false) {
+      document.write("2<br>");
+    } else {
+      document.write("3<br>");
+    }
+    document.write("4<br>");
+  </script>
+
   <h3>1&lt;2</h3>
   <script>
-	//document.write 의 기능은 , JS 로 HTML 에 출력하기.
-	document.write("<h1>test</h1>")
-    document.write(1<2);
+    //document.write 의 기능은 , JS 로 HTML 에 출력하기.
+    document.write("<h1>test</h1>")
+    document.write(1 < 2);
   </script>
   <h3>1&lt;1</h3>
   <script>
-    document.write(1<2);
+    document.write(1 < 2);
   </script>
 </body>
+
 </html>
