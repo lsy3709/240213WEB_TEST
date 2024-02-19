@@ -8,13 +8,37 @@
 </head>
 
 <body>
+
+  <!-- 연습, 짝수 : 2,4,6,8 출력해보기. 
+  조건
+  1) while 문 사용 
+  2) if 문 사용해서, 출력해보기. 
+  3) 사칙연산에서 % 나머지를 의미하는데, 힌트, 
+  2로 나누어서 0이면,0이 아니면, 활용하기.  -->
+  <h2>점심메뉴(배열), 먹고 싶은 메뉴 5개 정해서, 반복문으로 출력해보기.</h2>
+<ul>
+
+  <script>
+    var lunchMenu = ["된장찌개","돼지국밥","칼국수","삼선우동","해장국"]
+    var i = 0;
+    while(i < lunchMenu.length ) { // 0,1,2,3   4에서 실행이 안됨. 
+      document.write('<li>'+ lunchMenu[i] +'</li>');
+      i = i + 1;
+    }
+  </script>
+</ul>
+
   <h2>2, 3번째 코드 3번 반복</h2>
   <script>
     document.write('<li>1</li>');
+    // 상태 변수로, 초깃값으로 활용이 되었고, 상태 패턴. 
+    // 
     var i = 0;
-    while (i < 3) {
+    while (i < 3) { //i = 0,1,2,   3일 때 실행이 안됨. 
+      // 반복문안에 참일 때, 실행이 되는 문장, 결론, 3번이 실행이됨. 
       document.write('<li>2</li>');
       document.write('<li>3</li>');
+      // 주의사항. 상태 변수 증가 시키기.
       i = i + 1;
     }
     document.write('<li>4</li>');
