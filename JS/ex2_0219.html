@@ -8,16 +8,51 @@
 </head>
 
 <body>
+  <h2>2, 3번째 코드 3번 반복</h2>
+  <script>
+    document.write('<li>1</li>');
+    var i = 0;
+    while (i < 3) {
+      document.write('<li>2</li>');
+      document.write('<li>3</li>');
+      i = i + 1;
+    }
+    document.write('<li>4</li>');
+  </script>
+
+  <h1>Loop : 반복문 필요성, 문제 제시</h1>
+  <ul>
+    <script>
+      document.write('<li>1</li>');
+      document.write('<li>2</li>');
+      document.write('<li>3</li>');
+      document.write('<li>4</li>');
+    </script>
+  </ul>
 
   <h1> Array </h1>
   <h2>Syntax</h2>
   <script>
     var coworkers = ["egoing", "leezche"];
+    // 배열 , [] 대괄호라고, 
+    // 객체 , {} 중괄호로 사용하고,
+    // 객체 -> json (중간데이터) , {} 중괄호로 사용하고, 
   </script>
   <h2>get : 배열의 요소를 가져오기. </h2>
   <script>
     document.write("<h2> coworkers[0] : " + coworkers[0] + "</h2>");
     document.write("<h2> coworkers[1] : " + coworkers[1] + "</h2>");
+  </script>
+
+  <h2>count : 배열 요소의 갯수 (사이즈 , 렝스)</h2>
+  <script>
+    document.write("<h2> coworkers.length : " + coworkers.length + "</h2>");
+  </script>
+
+  <h2>add : 배열에 요소를 추가를 하는데, 배열의 뒤에 추가한다. </h2>
+  <script>
+    coworkers.push('duru');
+    coworkers.push('taeho');
   </script>
 
   <!-- document.querySelector('#night_day') => 사실 본인이 이미 
@@ -41,7 +76,7 @@
   }
   ">
 
-<input id="night_day2" type="button" value="night" onclick="
+  <input id="night_day2" type="button" value="night" onclick="
 if(document.querySelector('#night_day2').value === 'night') {
   document.querySelector('body').style.backgroundColor = 'black';
   document.querySelector('body').style.color= 'white';
