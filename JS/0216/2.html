@@ -17,60 +17,87 @@
             <li><a href="2.html">CSS</a></li>
             <li><a href="3.html">JavaScript</a></li>
         </ol>
-    
-    <div id="article">
-        <!-- 버튼으로 배경색 및, a 링크 색상 변경 JS 테스트중  -->
-        <input type="button" id="changeColorBtn" value="night"
-        onclick="changeColorTest()">
-        <h2>CSS란 무엇인가?</h2>
-        <p style="margin-top: 40px;">
-            Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation
-            of a document written in a markup language such as HTML.[1] CSS is a cornerstone technology
-            of the World Wide Web, alongside HTML and JavaScript.[2]
-            CSS is designed to enable the separation of presentation and content, including layout,
-            colors, and fonts.[3] This separation can improve content accessibility; provide more flexibility
-            and control in the specification of presentation characteristics; enable multiple web pages to
-            share formatting by specifying the relevant CSS in a separate .css file, which reduces complexity
-            and repetition in the structural content
-        </p>
-    </div>
-</div>
-<script>
-    function changeColorTest() { 
-        //함수(=메서드) 이름 작명시 changeColorTest , 단어와 단어 사이에 
-        //2번째 단어의 첫글자가 대문자로 시작하고, 캐멀케이스(camelcase)
-        var target = document.querySelector('body');
-        if (this.value === 'night') {
-            target.style.backgroundColor = 'black';
-            target.style.color = 'white';
-            this.value = 'day'
 
-            // 추가한 코드인데. 
-            // a 태그를 다중 선택자이용해서, alist 변수에 담아서
-            // 각 a 태그 속성(색상변경)에 접근해서, 변경작업(반복문 이용해서)
-            var alist = document.querySelectorAll('a');
-            var i = 0;
-            while ( i < alist.length) {
-                // 해당 a 태그의 글자 색상을 변경하는 코드. 
+        <div id="article">
+            <!-- 버튼으로 배경색 및, a 링크 색상 변경 JS 테스트중  -->
+            <!-- onclick 속성의 값으로 this 는 어디를 가리키고 있냐면, 
+            <input 태그를 가리키고 있습니다. -->
+            <!-- 함수로 변경하면서,  -->
+            <!-- 원래 this 가 가리키는 곳이 input 이 아니예요.
+                현재 함수를 가리켜요. 참고, 조금 어려움, 이유? 처음이라서,  -->
+            <!-- 해결책, 
+            함수에 this 를 전달하기. 참고로 여기서 this는 어디를 가리키나요?
+            <input 태그를 가리키고 있습니다.
+            그래서, 함수에 전달하려고합니다.  -->
+
+            <!-- 함수를 사용한다. 같은 말로, 함수를 호출한다. 
+            이 때, 여기 소괄호안에 있는 것을 뭐라고 부른다고 하냐면, 인자값(arguement)
+
+            함수를 정의를한다. 함수를 정의할 때, 
+            function changeColorTest(self),
+            정의시 사용이 되는 소괄호안에 호칭, 파라미터부름.(parameter) -->
+            <input type="button" id="changeColorBtn" value="night" 
+            onclick="changeColorTest(this)">
+            <h2>CSS란 무엇인가?</h2>
+            <p style="margin-top: 40px;">
+                Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation
+                of a document written in a markup language such as HTML.[1] CSS is a cornerstone technology
+                of the World Wide Web, alongside HTML and JavaScript.[2]
+                CSS is designed to enable the separation of presentation and content, including layout,
+                colors, and fonts.[3] This separation can improve content accessibility; provide more flexibility
+                and control in the specification of presentation characteristics; enable multiple web pages to
+                share formatting by specifying the relevant CSS in a separate .css file, which reduces complexity
+                and repetition in the structural content
+            </p>
+        </div>
+    </div>
+    <script>
+        // 함수 정의시 사용하는 파라미터의 이름의 값은 아무거나 사용하면되지만, 
+        // 의미상으로 사용을 권장함.
+        // 순서 
+        // 1번, 함수를 호출한다. onclick="changeColorTest(this)"
+        // 2번, 함수를 정의한 곳으로 이동한다. 
+        // 3번, 함수를 정의한 곳에서 this 어디로 가냐면? self 간다. 
+        // 예) x = 1
+        // 예) 매개변수 , self = this , self 라는 변수에, this 를 할당했다. 대입했다. 
+
+
+        function changeColorTest(self) {
+            //함수(=메서드) 이름 작명시 changeColorTest , 단어와 단어 사이에 
+            //2번째 단어의 첫글자가 대문자로 시작하고, 캐멀케이스(camelcase)
+            var target = document.querySelector('body');
+            if (self.value === 'night') {
+                target.style.backgroundColor = 'black';
+                target.style.color = 'white';
+                self.value = 'day'
+
+                // 추가한 코드인데. 
+                // a 태그를 다중 선택자이용해서, alist 변수에 담아서
+                // 각 a 태그 속성(색상변경)에 접근해서, 변경작업(반복문 이용해서)
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while (i < alist.length) {
+                    // 해당 a 태그의 글자 색상을 변경하는 코드. 
                     alist[i].style.color = 'red';
                     // 테스트, 개발 환경에서, 콘솔(크롬 웹브라우저에 확인용)
                     console.log(alist[i]);
                     i = i + 1;
                 }
-        } else {
-            target.style.backgroundColor = 'white';
-            target.style.color = 'black';
-            this.value = 'night'
+            } else {
+                target.style.backgroundColor = 'white';
+                target.style.color = 'black';
+                self.value = 'night'
 
-            var alist = document.querySelectorAll('a');
-            var i = 0;
-            while ( i < alist.length) {
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while (i < alist.length) {
                     alist[i].style.color = 'blue';
                     console.log(alist[i]);
                     i = i + 1;
                 }
-    }
-</script>
+            }
+        }
+    </script>
 </body>
 
 </html>
