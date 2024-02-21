@@ -86,8 +86,8 @@
                 // 추가한 코드인데. 
                 // a 태그를 다중 선택자이용해서, alist 변수에 담아서
                 // 각 a 태그 속성(색상변경)에 접근해서, 변경작업(반복문 이용해서)
-                var alist = document.querySelectorAll('a');
-                var i = 0;
+                // var alist = document.querySelectorAll('a');
+                // var i = 0;
                 // while (i < alist.length) {
                 //     // 해당 a 태그의 글자 색상을 변경하는 코드. 
                 //     alist[i].style.color = 'red';
@@ -95,7 +95,12 @@
                 //     console.log(alist[i]);
                 //     i = i + 1;
                 // }
-                LinksSetColor('red')
+                // 함수 버전. 
+                // LinksSetColor('red')
+
+                // 객체 버전. 객체에 함수 담기. 
+                Links.setColor('chocolate')
+
             } else {
                 // target.style.backgroundColor = 'black';
                 // BodySetBackgroudSetColor('black')
@@ -112,7 +117,9 @@
                 //     console.log(alist[i]);
                 //     i = i + 1;
                 // }
-                LinksSetColor('blue')
+                // LinksSetColor('blue')
+                // 객체 버전. 객체에 함수 담기. 
+                Links.setColor('aquamarine')
             }
         }
         // a 태그 요소를 모두 선택하고, 색상도 변경하는 기능
@@ -149,6 +156,19 @@
             ,
             setBackgroundColor: function (color) {
                 document.querySelector('body').style.backgroundColor = color;
+            }
+        }
+        // 기존에 a 태그 4개 선택해서, 색 변경하는 기능을 -> 객체 함수로 담기.
+        var Links = {
+            // 키 : setColor
+            // 값 : function ~ 문장. 
+            setColor: function (color) { // function 다음에 이름이 없는 익명함수. 
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while (i < alist.length) {
+                    alist[i].style.color = color;
+                    i = i + 1;
+                }
             }
         }
     </script>

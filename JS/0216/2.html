@@ -40,13 +40,13 @@
                 Body.setColor('black')
                 self.value = 'day'
 
-                LinksSetColor('red')
+                Links.setColor('chocolate')
             } else {
                 Body.setBackgroundColor('black')
                 Body.setColor('white')
                 self.value = 'night'
 
-                LinksSetColor('blue')
+                Links.setColor('aquamarine')
             }
         }
         
@@ -75,6 +75,17 @@
             ,
             setBackgroundColor: function (color) {
                 document.querySelector('body').style.backgroundColor = color;
+            }
+        }
+
+        var Links = {
+            setColor: function (color) { // function 다음에 이름이 없는 익명함수. 
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while (i < alist.length) {
+                    alist[i].style.color = color;
+                    i = i + 1;
+                }
             }
         }
     </script>
