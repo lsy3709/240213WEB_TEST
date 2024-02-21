@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+<h1>Hello</h1>
+  <script>
+    //간단한 자바스크립트(바닐라:기본), 확인시 
+    // 크롬 웹브라우저에서 ctrl + shift + j , 콘솔에서 확인도 가능. 참고.
+    // 다음줄 로 넘길 때, ctrl + enter 
+
+    // vscode 에서, 기본 포트 : 5500 번 사용중이었고,
+    // 그런데, 무슨 일인지 모르지만? 다른 프로세스에 해당 포트를 또 사용을해서, 
+    // 중복이 되니, 윈도우즈가 어느 포트를 선택 해야 할지, 선택 장애가 옴. 
+    // 그래서, 라이브 서버의 기본 포트 5500을 임시로 7777 로 변경. 
+    // 설정 -> port number -> setting.json 클릭 하고, 
+    // 추가로 코드 :  "liveServer.settings.port": 7777
+
+    sum(1,2)
+    sum(2,3)
+
+    function sum(left, right) {
+      document.write(left + right + '<br>');
+    }
+  </script>
+</body>
+
+</html>
