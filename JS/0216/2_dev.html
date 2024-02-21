@@ -93,7 +93,7 @@
                 //     console.log(alist[i]);
                 //     i = i + 1;
                 // }
-                setColor('red')
+                LinksSetColor('red')
             } else {
                 // target.style.backgroundColor = 'black';
                 BodySetBackgroudSetColor('black')
@@ -108,12 +108,14 @@
                 //     console.log(alist[i]);
                 //     i = i + 1;
                 // }
-                setColor('blue')
+                LinksSetColor('blue')
             }
         }
         // a 태그 요소를 모두 선택하고, 색상도 변경하는 기능
         // 함수로 분리 하기. 
-        function setColor(color) {
+        // 전 : setColor
+        // 이름 변경 : LinksSetColor
+        function LinksSetColor(color) {
             var alist = document.querySelectorAll('a');
             var i = 0;
             while (i < alist.length) {

@@ -59,17 +59,17 @@
                 BodySetColor('black')
                 self.value = 'day'
 
-                setColor('red')
+                LinksSetColor('red')
             } else {
                 BodySetBackgroudSetColor('black')
                 BodySetColor('white')
                 self.value = 'night'
 
-                setColor('blue')
+                LinksSetColor('blue')
             }
         }
         
-        function setColor(color) {
+        function LinksSetColor(color) {
             var alist = document.querySelectorAll('a');
             var i = 0;
             while (i < alist.length) {
