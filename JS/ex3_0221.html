@@ -49,9 +49,30 @@
 
     // 키 와 값 모두 출력. 
     for (var key in coworkers) {
-      document.write('coworkers 객체의 모든 키와 값 조회 : ' +key + ' : ' + coworkers[key] + '<br>');
+      document.write('coworkers 객체의 모든 키와 값 조회 : ' + key + ' : ' + coworkers[key] + '<br>');
     }
 
+    // 객체에 함수를 설정(set)
+    coworkers.showAll = function () { // 익명함수, 함수이름 없다, 그래서, 일회용 사용하고, 
+      // 보통 변수에 담아서, 정의 및 사용을 한다. 
+      // 나중에 화살표 함수로 확장시에도 사용을 한다. 
+      // 화살표 함수 기본 문법 :  (매개변수) => {실행될 내용}
+      // for (var key in coworkers) { // coworkers -> this로 대체 가능. 
+      //   // 이유는 현재 함수의 부모의 요소가 coworkers 때문에, 결론, 자기자신이다. 
+      //   document.write('객체에 함수로 set,get 예시 : '+key + ' : ' + coworkers[key] + '<br>');
+      // }
+      // this 버전. 
+      for (var key in this) { // coworkers -> this로 대체 가능. 
+        // 이유는 현재 함수의 부모의 요소가 coworkers 때문에, 결론, 자기자신이다. 
+        document.write('객체에 함수로 set,get 예시 : ' + key + ' : ' + this[key] + '<br>');
+      }
+    }
+
+    // 객체에 있는 함수 이용 요거는 많이 했음. 사용법 
+    coworkers.showAll();
+
+    // 출력시, key에 showAll 정체는 함수 임. 
+    // 그래서, 반복문으로 출력시, showAll 같이 출력이 되어서, 다 나온다. 
 
     //간단한 자바스크립트(바닐라:기본), 확인시 
     // 크롬 웹브라우저에서 ctrl + shift + j , 콘솔에서 확인도 가능. 참고.

@@ -76,9 +76,11 @@
                 // 기존에는 부분 중복되는 부분을 target으로 변수에 할당해서, 리팩토링했고, 
                 // 지금을 함수를 이용할 예정. 
                 // target.style.backgroundColor = 'black';
-                BodySetBackgroudSetColor('black')
+                // BodySetBackgroudSetColor('black')
+                Body.setBackgroundColor('black')
                 // target.style.color = 'white';
-                BodySetColor('white')
+                // BodySetColor('white')
+                Body.setColor('white')
                 self.value = 'day'
 
                 // 추가한 코드인데. 
@@ -96,9 +98,11 @@
                 LinksSetColor('red')
             } else {
                 // target.style.backgroundColor = 'black';
-                BodySetBackgroudSetColor('black')
+                // BodySetBackgroudSetColor('black')
+                Body.setBackgroundColor('black')
                 // target.style.color = 'white';
-                BodySetColor('white')
+                // BodySetColor('white')
+                Body.setColor('white')
                 self.value = 'night'
 
                 // var alist = document.querySelectorAll('a');
@@ -132,6 +136,18 @@
         // Body 태그 하위에 배경색을 변경하는 함수
         function BodySetBackgroudSetColor(color) {
             document.querySelector('body').style.backgroundColor = color;
+        }
+
+        // Body 라는 이름으로 객체 형태이고,
+        // 객체 안에 , 속성으로 익명 함수를 이용하고 있다. 
+        var Body = {
+            setColor: function (color) {
+                document.querySelector('body').style.color = color;
+            }
+            ,
+            setBackgroundColor: function (color) {
+                document.querySelector('body').style.backgroundColor = color;
+            }
         }
     </script>
 </body>
