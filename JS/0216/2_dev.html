@@ -99,10 +99,10 @@
             } else {
                 // target.style.backgroundColor = 'black';
                 // BodySetBackgroudSetColor('black')
-                Body.setBackgroundColor('black')
+                Body.setBackgroundColor('white')
                 // target.style.color = 'white';
                 // BodySetColor('white')
-                Body.setColor('white')
+                Body.setColor('black')
                 self.value = 'night'
 
                 // var alist = document.querySelectorAll('a');
@@ -141,6 +141,8 @@
         // Body 라는 이름으로 객체 형태이고,
         // 객체 안에 , 속성으로 익명 함수를 이용하고 있다. 
         var Body = {
+            // 키 : setColor
+            // 값 : function ~ 문장. 
             setColor: function (color) {
                 document.querySelector('body').style.color = color;
             }
