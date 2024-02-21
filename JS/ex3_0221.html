@@ -9,7 +9,33 @@
 
 <body>
   <h1>Hello</h1>
+
+  
+
   <script>
+    // 객체 형식으로, get , set , 연습해보기. 
+    var coworkers = {
+      "programmer": "egoing",
+      "designer": "leezche"
+    }
+
+    // 객체의 키로  해당 값 가져오기 연습
+    document.write("coworkers의 키 programmer 로 해당 값 가져오기 :  " + coworkers.programmer)
+
+    document.write("<br>")
+    // 추가로 값 넣기. 
+    coworkers.test = "lsy"
+
+    // 객체의 키로  해당 값 가져오기 연습
+    document.write("coworkers의 키 test 로 해당 값 가져오기 :  " + coworkers.test +"<br>")
+
+    // 추가로 값 넣기2, 해당 변수가 띄어쓰기가 포함이 될 때. 
+    coworkers["test data"] = "lsy data";
+
+    // 객체의 키로  해당 값 가져오기 연습
+    document.write("coworkers의 키 test data 로 해당 값 가져오기 :  " + coworkers["test data"] +"<br>")
+
+
     //간단한 자바스크립트(바닐라:기본), 확인시 
     // 크롬 웹브라우저에서 ctrl + shift + j , 콘솔에서 확인도 가능. 참고.
     // 다음줄 로 넘길 때, ctrl + enter 
@@ -35,12 +61,12 @@
     // 예) "   '안에는 작은 따옴표'  " 
     // 예2) '   "안에는 큰 따옴표"  '
     function sumColorRed(left, right) {
-     // 사칙 연산에서 + (더하기) 차례대로 진행이 되는데, 
-     // 먼저 문자열을 먼저 + 사용시 이때는 연결 연산자로 사용이 되어서, 
-     // 더하기 전에 문자열로 변경이 됨. 문제. 
-     // 그래서, sum 이라 함수를 return 키워드 이용해서, 재사용을 했음.  
+      // 사칙 연산에서 + (더하기) 차례대로 진행이 되는데, 
+      // 먼저 문자열을 먼저 + 사용시 이때는 연결 연산자로 사용이 되어서, 
+      // 더하기 전에 문자열로 변경이 됨. 문제. 
+      // 그래서, sum 이라 함수를 return 키워드 이용해서, 재사용을 했음.  
       // document.write('<div style="color: red;">' +'<h1>'+ left + right +'</h1>'+ '</div><br>');
-      document.write('<div style="color: red;">' +'<h1>'+sum(left,right) +'</h1>'+ '</div><br>');
+      document.write('<div style="color: red;">' + '<h1>' + sum(left, right) + '</h1>' + '</div><br>');
     }
 
     sum(2, 3);
