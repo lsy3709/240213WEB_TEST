@@ -1,0 +1,13 @@
+부트스트랩 소개 및 기본 사용법
+
+공식 문서에서, 기본적인 튜토리얼 몇가지 소개.
+
+현재 5.3버전
+
+준비물
+1)css 파일 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+2)js 파일 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+3) 연습장으로 사용할 html 문서 하나 만들기. 
+bootstrap_test ,폴더 만들어서, test1.html 문서 만들기. 
