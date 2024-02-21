@@ -40,7 +40,16 @@
     // 기본 문법 구조 : for ( 변수 in 복수개(객체,배열등))
     // 동작 방식은, 복수개에서 하나씩 꺼내서, 변수에 담기. 
     for (var key in coworkers) {
-      document.write('coworkers 객체의 모든 key 조회, for 문으로 해당 키에 속성 가져오기 : '+key + '<br>');
+      document.write('coworkers 객체의 모든 key 조회, for 문으로 해당 키에 속성 가져오기 : ' + key + '<br>');
+    }
+    // 객체의 키로 해당 value 값 조회하기. 
+    for (var key in coworkers) {
+      document.write('coworkers 객체의 모든 value 조회, for 문으로 해당 키로 값 가져오기 : ' + coworkers[key] + '<br>');
+    }
+
+    // 키 와 값 모두 출력. 
+    for (var key in coworkers) {
+      document.write('coworkers 객체의 모든 키와 값 조회 : ' +key + ' : ' + coworkers[key] + '<br>');
     }
 
 
