@@ -8,7 +8,7 @@
 </head>
 
 <body>
-<h1>Hello</h1>
+  <h1>Hello</h1>
   <script>
     //간단한 자바스크립트(바닐라:기본), 확인시 
     // 크롬 웹브라우저에서 ctrl + shift + j , 콘솔에서 확인도 가능. 참고.
@@ -20,13 +20,31 @@
     // 그래서, 라이브 서버의 기본 포트 5500을 임시로 7777 로 변경. 
     // 설정 -> port number -> setting.json 클릭 하고, 
     // 추가로 코드 :  "liveServer.settings.port": 7777
+    // 재시작. vscode 끄고, 다시 시작. 
 
-    sum(1,2)
-    sum(2,3)
+    sum(1, 2)
+    sum(2, 3)
 
     function sum(left, right) {
-      document.write(left + right + '<br>');
+      // document.write(left + right + '<br>');
+      return left + right
     }
+
+    // 주의사항, 문자열 표기시, 작은 따옴표 (') , 또는 큰 따옴표 (")
+    // 안에 작성하고, 문자열 내부에 또 문자열이 온다면
+    // 예) "   '안에는 작은 따옴표'  " 
+    // 예2) '   "안에는 큰 따옴표"  '
+    function sumColorRed(left, right) {
+     // 사칙 연산에서 + (더하기) 차례대로 진행이 되는데, 
+     // 먼저 문자열을 먼저 + 사용시 이때는 연결 연산자로 사용이 되어서, 
+     // 더하기 전에 문자열로 변경이 됨. 문제. 
+     // 그래서, sum 이라 함수를 return 키워드 이용해서, 재사용을 했음.  
+      // document.write('<div style="color: red;">' +'<h1>'+ left + right +'</h1>'+ '</div><br>');
+      document.write('<div style="color: red;">' +'<h1>'+sum(left,right) +'</h1>'+ '</div><br>');
+    }
+
+    sum(2, 3);
+    sumColorRed(100, 200);
   </script>
 </body>
 
