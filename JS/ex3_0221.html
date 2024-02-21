@@ -10,7 +10,7 @@
 <body>
   <h1>Hello</h1>
 
-  
+
 
   <script>
     // 객체 형식으로, get , set , 연습해보기. 
@@ -27,13 +27,21 @@
     coworkers.test = "lsy"
 
     // 객체의 키로  해당 값 가져오기 연습
-    document.write("coworkers의 키 test 로 해당 값 가져오기 :  " + coworkers.test +"<br>")
+    document.write("coworkers의 키 test 로 해당 값 가져오기 :  " + coworkers.test + "<br>")
 
     // 추가로 값 넣기2, 해당 변수가 띄어쓰기가 포함이 될 때. 
     coworkers["test data"] = "lsy data";
 
     // 객체의 키로  해당 값 가져오기 연습
-    document.write("coworkers의 키 test data 로 해당 값 가져오기 :  " + coworkers["test data"] +"<br>")
+    document.write("coworkers의 키 test data 로 해당 값 가져오기 :  " + coworkers["test data"] + "<br>")
+
+    // 객체와 반복문을 이용해보기, for 향상된 for문이라고해서, in 키워드를 이용해서. 
+    // 해당 복수개에서, 하나씩 꺼내서, 사용해보기. 
+    // 기본 문법 구조 : for ( 변수 in 복수개(객체,배열등))
+    // 동작 방식은, 복수개에서 하나씩 꺼내서, 변수에 담기. 
+    for (var key in coworkers) {
+      document.write('coworkers 객체의 모든 key 조회, for 문으로 해당 키에 속성 가져오기 : '+key + '<br>');
+    }
 
 
     //간단한 자바스크립트(바닐라:기본), 확인시 
