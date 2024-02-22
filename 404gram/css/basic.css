@@ -48,3 +48,8 @@ body {
   background-size: cover;
   background-position: center;
 }
+
+/* 프리뷰 클릭시, 파일 선택 연결 샘플 코드  */
+.form-group input[type="file"] {
+  display: none;
+}
