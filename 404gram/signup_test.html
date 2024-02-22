@@ -23,10 +23,21 @@
       </div> -->
 
       <!-- 두번째 방법으로 프로필 이미지 뷰 클릭시, 파일 선택 연결.  -->
+      <!-- <div class="form-group">
+        <div class="preview" id="imagePreview" onclick="document.getElementById('profile_image').click()">
+          <img id="previewImage" src="user_profile.png" alt="프로필 이미지">
+        </div>
+        <input type="file" id="profile_image" name="profile_image" class="file-input" accept="image/*"
+          onchange="previewImage(event)">
+      </div> -->
       <div class="form-group">
-        <div class="preview" id="imagePreview" onclick="document.getElementById('profile_image').click()"></div>
-        <input type="file" id="profile_image" name="profile_image" accept="image/*" onchange="previewImage(event)">
+        <div class="preview" id="imagePreview" onclick="document.getElementById('profile_image').click()">
+          <img id="previewImage" src="user_profile.png" alt="프로필 이미지">
+        </div>
+        <input type="file" id="profile_image" name="profile_image" class="file-input" accept="image/*"
+          onchange="previewImage(event)">
       </div>
+
 
       <!-- 첫번째 방법, 사진을 선택하는 버튼을 따로 해서 구현방법 -->
       <!-- <div class="form-group">
@@ -36,7 +47,7 @@
       </div> -->
 
       <!-- 두번째 방법, 프로필 이미지를 클릭시 이미지를 선택 하게끔 하기.  -->
-        <!-- 1. 프리뷰 디브 태그 안에, 먼저 인풋 태그를 넣어서 1차 시도를 했고, 
+      <!-- 1. 프리뷰 디브 태그 안에, 먼저 인풋 태그를 넣어서 1차 시도를 했고, 
         결과, 프리뷰 요소에 파일 선택이라는 버튼이 보였음. 보기는 안좋음. 
 
         2. 프리뷰를 클릭하는데, 파일 선택을 안보이게하고, 프리뷰 디브 태그를 
@@ -45,6 +56,14 @@
         <div class="form-group">
           <div class="preview" id="imagePreview" onclick="document.getElementById('profile_image').click()"></div>
           <input type="file" id="profile_image" name="profile_image" accept="image/*" onchange="previewImage(event)">
+        </div> -->
+
+      <!-- 세번째 샘플코드, -->
+      <!-- <div class="form-group">
+          <div class="preview" id="imagePreview" onclick="document.getElementById('profile_image').click()">
+            <img id="previewImage" src="default-profile-image.jpg" alt="프로필 이미지">
+          </div>
+          <input type="file" id="profile_image" name="profile_image" class="file-input" accept="image/*" onchange="previewImage(event)">
         </div> -->
 
 
@@ -77,7 +96,18 @@
         var preview = document.getElementById('imagePreview');
         preview.style.backgroundImage = 'url(' + reader.result + ')';
       }
+      // 추가로 , 기존 이미지를 display none 으로 변경하는 코드 추가하기. 
+      // var preview_image = document.getElementById('previewImage');
+      //   preview_image.style.display = 'none';
+
+
       reader.readAsDataURL(event.target.files[0]);
+
+      // 기본 이미지 숨기기
+      var defaultImage = document.getElementById('previewImage');
+      if (defaultImage) {
+        defaultImage.style.display = 'none';
+      }
     }
   </script>
 
