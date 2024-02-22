@@ -17,7 +17,17 @@
   <div class="container">
     <form action="#" method="POST">
       <!-- 프로필 사진 미리보기 형식으로 위로 이동했음 -->
-      <div class="preview"></div>
+      <div class="preview" id="imagePreview"></div>
+
+      <!-- 첫번째 방법, 사진을 선택하는 버튼을 따로 해서 구현방법 -->
+      <div class="form-group">
+        <label for="profile_image">프로필 이미지:</label>
+        <input type="file" id="profile_image" name="profile_image" accept="image/*" onchange="previewImage(event)">
+        <label for="profile_image" class="file-label">파일 선택</label>
+      </div>
+
+      <!-- 두번째 방법, 프로필 이미지를 클릭시 이미지를 선택 하게끔 하기.  -->
+
       <div class="form-group">
         <label for="email">이메일:</label>
         <input type="email" id="email" name="email" required>
@@ -38,6 +48,18 @@
       </div>
     </form>
   </div>
+
+  <script>
+    // 선택된 프로필 이미지를 로드하는 코드, 사진을 넣는 방법
+    function previewImage(event) {
+      var reader = new FileReader();
+      reader.onload = function() {
+        var preview = document.getElementById('imagePreview');
+        preview.style.backgroundImage = 'url(' + reader.result + ')';
+      }
+      reader.readAsDataURL(event.target.files[0]);
+    }
+    </script>
 
   <!-- 부트스트랩 준비물 2 js 파일 -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
